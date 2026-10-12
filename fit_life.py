@@ -5,16 +5,31 @@ CONSTANT_ML = 1000
 print('Привет! Я твой цифровой фитнес-трекер, давай знакомиться')
 
 # Спрашиваем имя пользователя, сохраняем в переменную
-user_name = input('Как тебя зовут?')
+user_name = input('Как тебя зовут? ')
 
 # Спрашиваем возраст пользователя, сохраняем в переменную
-user_age = int(input('Сколько тебе лет?'))
+while True:
+    try:
+        user_age = int(input('Сколько тебе лет? '))
+        break
+    except ValueError:
+        print('Пожалуйста, введите число')
 
 # Спрашиваем вес пользователя, сохраняем в переменную
-user_weight = float(input('Твой вес, в кг, например, 70.5'))
+while True:
+    try:
+        user_weight = float(input('Твой вес, в кг, например, 70.5 '))
+        break
+    except ValueError:
+        print('Пожалуйста, введите число')
 
 # Спрашиваем рост пользователя, сохраняем в переменную
-user_height = float(input('Твой рост, в м, например, 1.75'))
+while True:
+    try:
+        user_height = float(input('Твой рост, в м, например, 1.75 '))
+        break
+    except ValueError:
+        print('Пожалуйста, введите число')
 
 # Рассчитываем индекс массы тела, сохраняем в переменную
 bmi = round(user_weight / (user_height**2), 1)
