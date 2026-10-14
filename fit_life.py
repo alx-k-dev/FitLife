@@ -11,7 +11,10 @@ user_name = input('Как тебя зовут? ')
 while True:
     try:
         user_age = int(input('Сколько тебе лет? '))
-        break
+        if user_age <= 0:
+            print('Возраст должен быть больше нуля!')
+        else:
+            break
     except ValueError:
         print('Пожалуйста, введите число')
 
